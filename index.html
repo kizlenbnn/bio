@@ -214,7 +214,7 @@
       <input class="vol-slider" type="range" id="volSlider" min="0" max="100" value="70" oninput="setVolume(this.value)">
     </div>
     <div class="visitors">
-      👁 <span id="visitCount">...</span>
+      👁 <img src="https://hits.sh/vapuas-bio.svg?style=flat&label=&color=6dffaa&labelColor=0a1a0f&extraCount=0" alt="views" style="height:18px;vertical-align:middle;filter:drop-shadow(0 0 4px #6dffaa88)">
     </div>
     <div class="footer">2026 · VAPUAS</div>
   </div>
@@ -293,16 +293,7 @@
     setTimeout(() => r.remove(), 500);
   }
 
-  async function loadVisits() {
-    try {
-      const res = await fetch('https://counterapi.dev/api/vapuas-bio/visits/up', { mode: 'cors' });
-      const data = await res.json();
-      document.getElementById('visitCount').textContent = data.count.toLocaleString();
-    } catch(e) {
-      document.getElementById('visitCount').textContent = '—';
-    }
-  }
-  loadVisits();
+
 </script>
 </body>
 </html>
